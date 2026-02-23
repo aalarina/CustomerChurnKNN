@@ -13,3 +13,31 @@ The analysis includes:
 - Hyperparameter tuning (number of neighbors, distance metric)
 - Cross-validation and evaluation using balanced accuracy
 - Visualizations of validation curves
+
+## Methodology
+
+### Data Preprocessing
+
+- Encoded categorical variables into numeric format
+
+- Removed non-informative columns (e.g., phone number, state)
+
+### Model Training
+
+- Used KNeighborsClassifier
+
+- Evaluated initial model performance
+
+- Hyperparameter Tuning
+
+**Optimized:**
+
+- Number of neighbors (k)
+
+- Distance metric (p parameter)
+
+Used GridSearchCV with cross-validation
+
+### Evaluation Metric
+
+Balanced Accuracy, suitable for imbalanced datasets
