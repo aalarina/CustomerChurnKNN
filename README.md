@@ -14,6 +14,16 @@ The analysis includes:
 - Cross-validation and evaluation using balanced accuracy
 - Visualizations of validation curves
 
+## Repository Structure
+
+```
+CustomerChurnKNN/
+├── CustomerChurnKNN.ipynb     # main analysis notebook
+├── README.md
+├── requirements.txt
+└── LICENSE
+```
+
 ## Methodology
 
 ### Data Preprocessing
@@ -41,3 +51,21 @@ Used GridSearchCV with cross-validation
 ### Evaluation Metric
 
 Balanced Accuracy, suitable for imbalanced datasets
+
+## Results
+
+- Best hyperparameters identified using cross-validation
+
+- Performance evaluated on validation set
+
+- Visualization of accuracy vs number of neighbors
+
+- Observed that model performance remained below 0.7, indicating limitations of kNN for this dataset
+
+## Conclusion
+
+This project demonstrates practical use of kNN for classification and importance of hyperparameter tuning.
+
+## License
+
+This project is licensed under the MIT License.
