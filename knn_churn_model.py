@@ -1,6 +1,4 @@
-# ======================
-# Imports
-# ======================
+# ----- Imports -----
 import pandas as pd
 import numpy as np
 
@@ -9,15 +7,11 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import balanced_accuracy_score
 
 
-# ======================
-# Load Data
-# ======================
+# ----- Load Data -----
 df = pd.read_csv("data/churn.csv")
 
 
-# ======================
-# Preprocessing
-# ======================
+# ----- Preprocessing -----
 df['international plan'] = df['international plan'].map({'no': 0, 'yes': 1})
 df['voice mail plan'] = df['voice mail plan'].map({'no': 0, 'yes': 1})
 
@@ -25,9 +19,7 @@ df = df.drop(['phone number', 'state'], axis=1)
 df['churn'] = df['churn'].astype(int)
 
 
-# ======================
-# Split Data
-# ======================
+# ----- Split Data -----
 X = df.drop('churn', axis=1)
 y = df['churn']
 
@@ -36,9 +28,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 
-# ======================
-# Baseline Model
-# ======================
+# ----- Baseline Model -----
 model = KNeighborsClassifier()
 model.fit(X_train, y_train)
 
@@ -48,9 +38,7 @@ baseline_score = balanced_accuracy_score(y_test, y_pred)
 print("Baseline Balanced Accuracy:", baseline_score)
 
 
-# ======================
-# Hyperparameter Tuning (k)
-# ======================
+# ----- Hyperparameter Tuning (k) -----
 param_grid = {
     'n_neighbors': np.arange(1, 50, 2)
 }
@@ -70,18 +58,14 @@ print("Best k:", grid.best_params_)
 print("CV Score:", grid.best_score_)
 
 
-# ======================
-# Evaluate Best Model
-# ======================
+# ----- Evaluate Best Model -----
 y_pred = best_k_model.predict(X_test)
 final_score = balanced_accuracy_score(y_test, y_pred)
 
 print("Final Balanced Accuracy:", final_score)
 
 
-# ======================
-# Tuning distance metric (p)
-# ======================
+# ----- Tuning distance metric (p) -----
 param_grid = {
     'n_neighbors': np.arange(1, 10, 2),
     'p': np.linspace(1, 10, 10),
