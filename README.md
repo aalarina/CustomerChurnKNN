@@ -1,10 +1,13 @@
 # KNN Classification on Customer Churn Dataset
 
-**Dataset:** [Link to dataset on Google Drive](https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset)
+**Dataset:** [Churn in Telecoms Dataset](https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset)
 
 ## Overview
-This project demonstrates supervised learning using the k-Nearest Neighbors (kNN) algorithm. 
-The goal is to predict customer churn (binary classification) using various features from the dataset.
+This project explores a supervised machine learning approach to predicting customer churn using the k-Nearest Neighbors (kNN) algorithm.
+
+Customer churn prediction is a common classification task in industry, where the objective is to identify users likely to discontinue a service. The dataset contains a mix of numerical and categorical features describing customer behavior.
+
+The project focuses on building a baseline model, improving it through hyperparameter tuning, and analyzing its performance.
 
 The analysis includes:
 - Preprocessing categorical and numerical features
@@ -26,31 +29,15 @@ CustomerChurnKNN/
 
 ## Methodology
 
-### Data Preprocessing
+**Data Preprocessing:** Converted categorical features into numerical representations and removed non-informative features (e.g., phone number, state).
 
-- Encoded categorical variables into numeric format
+**Model Training:** Implemented the KNeighborsClassifier from scikit-learn, trained an initial baseline model and evaluated performance on a validation split.
 
-- Removed non-informative columns (e.g., phone number, state)
+**Hyperparameter Tuning:** To improve model performance, number of neighbors (k) and distance metric (Minkowski distance parameter p) were optimized.
+Grid search with cross-validation (GridSearchCV) was used to identify optimal values.
 
-### Model Training
-
-- Used KNeighborsClassifier
-
-- Evaluated initial model performance
-
-- Hyperparameter Tuning
-
-**Optimized:**
-
-- Number of neighbors (k)
-
-- Distance metric (p parameter)
-
-Used GridSearchCV with cross-validation
-
-### Evaluation Metric
-
-Balanced Accuracy, suitable for imbalanced datasets
+**Evaluation Metric:** Balanced Accuracy was used due to class imbalance in the dataset.
+This metric provides a more reliable evaluation compared to standard accuracy.
 
 ## Results
 
@@ -64,7 +51,15 @@ Balanced Accuracy, suitable for imbalanced datasets
 
 ## Conclusion
 
-This project demonstrates practical use of kNN for classification and importance of hyperparameter tuning.
+This project demonstrates:
+
+- Practical application of the kNN algorithm
+
+- Importance of preprocessing for distance-based models
+
+- The role of hyperparameter tuning in improving performance
+
+- Limitations of simpler models on complex datasets
 
 ## License
 
