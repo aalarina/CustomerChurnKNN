@@ -21,8 +21,9 @@ The analysis includes:
 
 ```
 CustomerChurnKNN/
-├── CustomerChurnKNN.ipynb     # main analysis notebook
+├── CustomerChurnKNN.ipynb    
 ├── README.md
+├── knn_churn_model.py
 ├── requirements.txt
 └── LICENSE
 ```
