@@ -21,9 +21,10 @@ The analysis includes:
 
 ```
 CustomerChurnKNN/
-├── CustomerChurnKNN.ipynb    
+├── notebooks/
+            └── CustomerChurnKNN.ipynb    
 ├── README.md
-├── knn_churn_model.py
+├── main.py
 ├── requirements.txt
 └── LICENSE
 ```
@@ -47,6 +48,8 @@ This metric provides a more reliable evaluation compared to standard accuracy.
 - Performance evaluated on validation set
 
 - Visualization of accuracy vs number of neighbors
+
+  <img width="555" height="556" alt="image" src="https://github.com/user-attachments/assets/7f87a231-8b22-4cb5-8c9d-299dfd6e93c8" />
 
 - Observed that model performance remained below 0.7, indicating limitations of kNN for this dataset
 
