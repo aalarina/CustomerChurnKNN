@@ -7,7 +7,7 @@ This project explores a supervised machine learning approach to predicting custo
 
 Customer churn prediction is a common classification task in industry, where the objective is to identify users likely to discontinue a service. The dataset contains a mix of numerical and categorical features describing customer behavior.
 
-The project focuses on building a baseline model, improving it through hyperparameter tuning, and analyzing its performance.
+The project focuses on building a baseline model, improving it through hyperparameter tuning and analyzing its performance.
 
 The analysis includes:
 - Preprocessing categorical and numerical features
